@@ -1,0 +1,43 @@
+<div id="<%= dom_id friend %>">
+  
+
+<div class="jumbotron">
+  <h1 class="display-4">
+    <%= friend.first_name %> 
+    <%= friend.last_name %>
+      
+    </h1>
+  <p class="lead"><b>Email</b> <%= friend.phone %></p>
+  <hr class="my-4">
+  <p>
+    <b>Phone number</b> <%= friend.email %> </br>
+    <b>Twitter</b> <%= friend.twitter %>
+  </p>
+
+
+
+
+  
+  <a class="btn btn-primary btn-lg" href="#" role="button">Twitter account</a>
+
+</br></br>
+
+<%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-secondary" %> 
+
+</br> </br>
+<td>
+      <%= button_to "Delete", @friend, form: { data: { turbo_confirm: "Are you sure?" } }, method: :delete,  class:"btn btn-danger
+      btn" %>
+        </td>
+</br>
+
+  <%= link_to "Back to friends", friends_path, class:"btn btn-secondary" %>
+
+
+
+</div>
+
+
+
+
+  
